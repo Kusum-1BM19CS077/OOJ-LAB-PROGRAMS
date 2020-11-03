@@ -20,7 +20,7 @@ a=ss.nextInt();
 b=ss.nextInt();
 double area;
 area=(double)a*b;
-System.out.println("The area of Recatngle is "+area);
+System.out.println("The area of Rectangle is "+area);
 }
 }
 class Triangle extends Shape
