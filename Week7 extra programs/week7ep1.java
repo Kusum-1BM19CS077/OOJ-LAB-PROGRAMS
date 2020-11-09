@@ -6,7 +6,7 @@ class Student {
 	String usn;
 	String name;
 	int sem;
-	void details()
+	Student()
 	{
 		Scanner z=new Scanner(System.in);
 		System.out.println("Enter student details");
@@ -23,7 +23,7 @@ class Test extends Student {
 	 int cie[];
      int t;
 
-	void accept()
+	Test()
 	{
 		Scanner s=new Scanner(System.in);
 		System.out.println("Enter the number of subjects:");
@@ -36,14 +36,14 @@ class Test extends Student {
 			credits[i]=s.nextInt();
 			cie[i]=s.nextInt();
 		}
+		
 	}
 }
 class Exam extends Test {
-	int see[];
-	void read()
+	int see[]=new int[t];
+	Exam()
 	{
 		Scanner a=new Scanner(System.in);
-		see=new int[t];
 		System.out.println("Enter SEE marks of student in each subject(Out of 100)");
 		for(int i=0;i<t;i++)
 		{
@@ -52,6 +52,9 @@ class Exam extends Test {
 	}
 }
 class Result extends Exam {
+	Result()
+	{
+	}
 	int marks[];
 	double calculate()
 	{
@@ -77,27 +80,21 @@ class Result extends Exam {
 class Main {
 	public static void main(String args[])
 	{
-		Scanner ss=new Scanner(System.in);
-		System.out.println("Enter the number of students:");
-		int n=ss.nextInt();
-		Student a[] = new Student[n];
-		Test b[]=new Test[n];
-		Exam c[]=new Exam[n];
-		Result d[]=new Result[n];
-		for(int i=0;i<n;i++)
-		{
-			a[i]=new Student();
-			a[i].details();
-			b[i]=new Test();
-			b[i].accept();
-			c[i]=new Exam();
-			c[i].read();
-			d[i]=new Result();
-			System.out.println("SGPA of Student "+(i+1)+" is :"+d[i].calculate());
-		}
+		 int n,i;
+    Scanner in  = new Scanner(System.in);
+    System.out.println("Enter the no of students");
+    n  = in.nextInt();
+    Result r[] = new Result[n];
+    System.out.println("Enter the details of all the students");
+    for(i=0;i<n;i++)
+    {
+      r[i] = new Result();
+      System.out.println("SGPA of Student "+(i+1)+" is :"+r[i].calculate());
+    }
+    
+		
 	}
 }
-		
 			
 		
 	
