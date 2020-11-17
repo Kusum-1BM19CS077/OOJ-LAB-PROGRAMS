@@ -1,8 +1,4 @@
 /*Week 9-Extra program
-
-Solve this program and write the procedure you have used to
-execute this in your observation
-
 Create a package CIE which has two classes- Student and Internals. The
 class Personal has members like usn, name, sem. The class Internals has an
 array that stores the internal marks scored in five courses of the current
